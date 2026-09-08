@@ -2,6 +2,14 @@
 
 Burp Suite extension for overriding HTTP responses. Define URL patterns, provide replacement responses (static text or dynamic Python 3 scripts), and Burp swaps them in automatically.
 
+## Changes in this fork
+
+- When an request is intercepted, it does not get forwarded to upstream (and the answer gets ignored).
+    Instead it is redirected to a local dummy web server.
+
+Note: The changes are vibe coded, so maybe it is not the best approach.
+But at least for my use case it worked pretty reliable.
+
 ## Features
 
 - **Static response mode** - paste a response body, set a status code, done
